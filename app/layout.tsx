@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Footer } from "@/components/Footer";
+import { ConditionalFooter } from "@/components/ConditionalFooter";
 import { FloatingPartnerButton } from "@/components/FloatingPartnerButton";
 import { Navbar } from "@/components/Navbar";
 import "./globals.css";
@@ -27,7 +27,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex flex-1 flex-col">{children}</main>
         <FloatingPartnerButton />
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );
