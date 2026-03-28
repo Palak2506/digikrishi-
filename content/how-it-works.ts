@@ -5,36 +5,36 @@ export const howItWorksSteps = [
   {
     title: "Farmer Registration",
     description:
-      "Capture farmer identity, household, and land-linked profiles with validation suited for rural onboarding.",
+      "Farmers are digitally enrolled with KYC documentation, profile creation, and Aadhaar-linked identity verification.",
   },
   {
     title: "Land Mapping",
     description:
-      "Digitize plots and boundaries so planning, advisories, and compliance rest on accurate geography.",
+      "Land parcels are geo-tagged with precise GIS boundaries, plot records maintained under the My Farms section.",
   },
   {
     title: "SHG Formation",
     description:
-      "Structure self-help groups with membership, leadership, and meeting rhythms visible to institutions.",
+      "Farmers are linked to local Self Help Groups with structured records of group participation and governance.",
   },
   {
     title: "Crop Planning",
     description:
-      "Align season, variety, and acreage choices with advisories, inputs, and expected offtake.",
+      "Seasonal crop plans recorded including variety selection, acreage, input requirements, and projected harvest timelines.",
   },
   {
     title: "Field Monitoring",
     description:
-      "Log visits, crop health, and interventions so progress is observable—not assumed.",
+      "Field agents update crop growth stages, document field conditions, and provide stage-wise advisory support.",
   },
   {
     title: "Aggregation and Market Engagement",
     description:
-      "Pool produce, coordinate logistics, and connect to buyers and mandis with traceable lots.",
+      "Produce aggregated through FPO networks and connected to buyers, processors, and institutional markets.",
   },
   {
     title: "Transaction Documentation",
     description:
-      "Record sales, payments, and receipts so finance, audit, and farmers share a single paper trail.",
+      "All aggregation activities, sales data, and market transactions are recorded in a tamper-proof digital ledger.",
   },
 ] as const;

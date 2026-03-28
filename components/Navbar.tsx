@@ -41,6 +41,7 @@ export function Navbar() {
       { href: "/", label: "Home" },
       { href: "/about", label: "About" },
       { href: "/how-it-works", label: "How It Works" },
+      { href: "/farmer-app", label: "Farmer App" },
       { href: "/for-banks", label: "For Banks" },
       { href: "/technology", label: "Technology" },
       { href: "/contact", label: "Contact" },
@@ -75,8 +76,8 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={[
-                    "text-sm font-medium text-white transition-colors hover:text-accent",
-                    active ? "text-accent" : "",
+                    "border-b-2 border-transparent pb-0.5 text-sm font-medium text-white transition-colors hover:text-accent",
+                    active ? "border-[#F4A322] text-accent" : "",
                   ].join(" ")}
                 >
                   {item.label}
@@ -124,8 +125,8 @@ export function Navbar() {
                       key={item.href}
                       href={item.href}
                       className={[
-                        "py-3 text-base font-medium text-white transition-colors hover:text-accent",
-                        active ? "text-accent" : "",
+                        "border-b-2 border-transparent py-3 text-base font-medium text-white transition-colors hover:text-accent",
+                        active ? "w-fit border-[#F4A322] text-accent" : "",
                       ].join(" ")}
                       onClick={() => setMobileOpen(false)}
                     >

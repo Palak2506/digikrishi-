@@ -1,3 +1,4 @@
+import { AppShowcase } from "@/components/AppShowcase";
 import { HeroSection } from "@/components/HeroSection";
 import { StakeholderCards } from "@/components/StakeholderCards";
 import { impactVisionCopy } from "@/content/home";
@@ -17,6 +18,8 @@ export default function Home() {
         <StakeholderCards />
       </div>
 
+      <AppShowcase />
+
       <section
         id="what-we-do"
         className="scroll-mt-0 bg-primary py-20 text-center text-white"
@@ -29,18 +32,12 @@ export default function Home() {
 
           <div className="mt-12 flex flex-wrap justify-center gap-8">
             <div className="rounded-xl bg-white/10 px-8 py-6 text-center">
-              <div className="text-3xl font-extrabold text-accent">7 Stages</div>
-              <div className="mt-1 text-sm text-white">
-                End-to-End Value Chain
-              </div>
+              <div className="text-3xl font-extrabold text-accent">1,240+</div>
+              <div className="mt-1 text-sm text-white">Farmers Registered</div>
             </div>
             <div className="rounded-xl bg-white/10 px-8 py-6 text-center">
-              <div className="text-3xl font-extrabold text-accent">
-                3 Institutions
-              </div>
-              <div className="mt-1 text-sm text-white">
-                SFAC · NABARD · NCDC
-              </div>
+              <div className="text-3xl font-extrabold text-accent">86</div>
+              <div className="mt-1 text-sm text-white">Active Crop Plans</div>
             </div>
             <div className="rounded-xl bg-white/10 px-8 py-6 text-center">
               <div className="text-3xl font-extrabold text-accent">10,000+</div>
