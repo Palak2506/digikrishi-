@@ -6,30 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
-function LeafIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width="18"
-      height="18"
-      fill="none"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M20 4c-7.2.2-12.1 3.3-14.5 7.1C3.8 14.3 4 18 4 20c1.9-.1 5.7-.6 8.9-1.9C16.7 16.4 19.8 11.4 20 4Z"
-        fill="#5AB56A"
-      />
-      <path
-        d="M6.5 17.5c2.7-3.8 6.7-7.1 11.5-9.5"
-        stroke="rgba(255,255,255,0.85)"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 type NavItem = { href: string; label: string };
 
 export function Navbar() {
@@ -59,12 +35,36 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6"
         aria-label="Main"
       >
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 font-bold text-[20px] tracking-tight text-white"
-        >
-          <LeafIcon />
-          <span>Digi Krishi</span>
+        <Link href="/">
+          <div
+            style={{ display: "flex", alignItems: "center", gap: "10px" }}
+          >
+            <img
+              src="/logo.png"
+              alt="Digi Krishi"
+              style={{
+                width: "38px",
+                height: "38px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                display: "block",
+              }}
+              onError={(e) => {
+                console.error("Logo failed to load");
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
+            />
+            <span
+              style={{
+                color: "white",
+                fontWeight: 700,
+                fontSize: "20px",
+                letterSpacing: "-0.3px",
+              }}
+            >
+              Digi Krishi
+            </span>
+          </div>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

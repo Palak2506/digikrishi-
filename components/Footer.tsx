@@ -70,7 +70,7 @@ export function Footer() {
 
       <div className="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-6">
         <p className="text-center text-xs text-white/50">
-          © 2025 Digi Krishi. All rights reserved.
+          © 2026 Digi Krishi. All rights reserved.
         </p>
       </div>
     </footer>

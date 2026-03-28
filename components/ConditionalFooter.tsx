@@ -9,7 +9,8 @@ export function ConditionalFooter() {
   if (
     pathname === "/contact" ||
     pathname === "/how-it-works" ||
-    pathname === "/farmer-app"
+    pathname === "/farmer-app" ||
+    pathname === "/technology"
   )
     return null;
 
