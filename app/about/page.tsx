@@ -67,7 +67,8 @@ const policySmallCards = [
 
 const platformSuite = [
   {
-    bar: "#2D8B3F",
+    imageSrc: "/farm3.jpg",
+    overlay: "rgba(45,139,63,0.3)",
     iconBg: "#EAF6EC",
     iconColor: "#2D8B3F",
     Icon: Smartphone,
@@ -80,7 +81,8 @@ const platformSuite = [
     cta: "Download Specs",
   },
   {
-    bar: "#F4A322",
+    imageSrc: "/farm4.jpg",
+    overlay: "rgba(244,163,34,0.3)",
     iconBg: "#FFF3DC",
     iconColor: "#F4A322",
     Icon: Users,
@@ -93,7 +95,8 @@ const platformSuite = [
     cta: "Download Specs",
   },
   {
-    bar: "#1E6B2E",
+    imageSrc: "/office1.jpg",
+    overlay: "rgba(30,107,46,0.3)",
     iconBg: "#EAF6EC",
     iconColor: "#1E6B2E",
     Icon: Monitor,
@@ -143,13 +146,27 @@ export default function AboutPage() {
       {/* SECTION 1 — HERO */}
       <section className="grid min-h-[420px] grid-cols-1 overflow-hidden lg:grid-cols-[55%_45%] lg:gap-0">
         <div className="relative min-h-[400px] overflow-hidden bg-[#0a1f0c] px-6 py-12 sm:px-12 sm:py-12 lg:p-12">
+          <img
+            src="/farm6.jpg"
+            alt="Farm"
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              opacity: 0.15,
+              zIndex: 0,
+            }}
+          />
           <div
-            className="pointer-events-none absolute inset-0"
+            className="pointer-events-none absolute inset-0 z-[1]"
             style={{ backgroundImage: heroLeftGrid }}
             aria-hidden
           />
           <motion.div
-            className="relative z-10"
+            className="relative z-[1]"
             initial="hidden"
             animate="show"
             variants={{
@@ -456,7 +473,32 @@ export default function AboutPage() {
                   transition={{ duration: 0.5, delay: i * 0.12 }}
                   className="overflow-hidden rounded-2xl border border-[#E8E8E8] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="h-[5px]" style={{ background: card.bar }} />
+                  <div
+                    style={{
+                      position: "relative",
+                      overflow: "hidden",
+                      height: "160px",
+                      borderRadius: "16px 16px 0 0",
+                    }}
+                  >
+                    <img
+                      src={card.imageSrc}
+                      alt={card.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        objectPosition: "center top",
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        background: card.overlay,
+                      }}
+                    />
+                  </div>
                   <div className="p-7">
                     <div
                       className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl"

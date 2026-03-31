@@ -14,12 +14,6 @@ import {
   Share2,
 } from "lucide-react";
 
-const heroMesh =
-  "repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.04) 60px, rgba(255,255,255,0.04) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.04) 60px, rgba(255,255,255,0.04) 61px), linear-gradient(to bottom right, #1a4a1f 0%, #2D8B3F 30%, #4a7c2f 50%, #8B9a2f 70%, #c4a832 100%)";
-
-const topoBg =
-  "repeating-radial-gradient(circle at 30% 50%, transparent 0px, transparent 40px, rgba(180,170,150,0.4) 40px, rgba(180,170,150,0.4) 41px), repeating-radial-gradient(circle at 70% 40%, transparent 0px, transparent 55px, rgba(160,150,130,0.3) 55px, rgba(160,150,130,0.3) 56px)";
-
 const partnerTypes = ["FPO", "Bank", "Buyer", "Field Agent"] as const;
 const roles = [
   "Strategic Planner",
@@ -66,19 +60,45 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white">
-      <section className="h-[320px] w-full" style={{ background: heroMesh }}>
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex h-full items-end p-6 pb-10 md:p-12 md:pb-16"
-        >
-          <h1 className="max-w-lg text-[28px] font-extrabold leading-[1.1] text-white md:text-[48px]">
-            Building the Future of
-            <br />
-            Precision Agriculture.
-          </h1>
-        </motion.div>
+      <section
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          minHeight: "320px",
+          display: "flex",
+          alignItems: "flex-end",
+        }}
+      >
+        <img
+          src="/farm5.jpg"
+          alt="Agriculture"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(135deg, rgba(10,46,15,0.85) 0%, rgba(26,74,31,0.75) 40%, rgba(139,96,0,0.6) 100%)",
+          }}
+        />
+        <div className="relative z-[1] w-full p-6 pb-10 md:p-12 md:pb-16">
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-[500px] text-[28px] font-extrabold leading-[1.1] text-white md:text-[48px]"
+          >
+            Building the Future of Precision Agriculture.
+          </motion.h1>
+        </div>
       </section>
 
       <section className="bg-white px-8 py-20">
@@ -281,12 +301,23 @@ export default function ContactPage() {
       >
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[45%_55%]">
           <div
-            className="h-72 w-full rounded-2xl"
             style={{
-              backgroundColor: "#d4cfc6",
-              backgroundImage: topoBg,
+              borderRadius: "20px",
+              overflow: "hidden",
+              height: "280px",
             }}
-          />
+          >
+            <img
+              src="/farm7.jpg"
+              alt="Local farming"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
           <div>
             <h2 className="mb-4 text-[32px] font-extrabold leading-[1.2] text-[#2D8B3F]">
               Local Roots, Global Precision.

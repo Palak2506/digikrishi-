@@ -546,7 +546,7 @@ export default function FarmerAppPage() {
           <div>
             <h3 className="mb-2 text-lg font-bold text-white">Digi Krishi</h3>
             <p className="mb-6 text-xs text-white/50">
-              © 2024 Digi Krishi. Cultivating Precision for a Sustainable Future.
+              © 2026 Digi Krishi. Cultivating Precision for a Sustainable Future.
             </p>
             <div className="flex gap-4 text-xs text-white/50">
               <Link href="/" className="hover:text-white">

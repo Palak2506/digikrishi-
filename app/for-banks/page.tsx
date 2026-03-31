@@ -308,17 +308,57 @@ export default function ForBanksPage() {
       >
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-[55%_45%]">
           <div
-            className="relative h-80 overflow-hidden rounded-2xl"
             style={{
-              background:
-                "repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px), linear-gradient(to bottom, #1a4a1f, #0a2e0f)",
+              position: "relative",
+              borderRadius: "16px",
+              overflow: "hidden",
+              height: "320px",
             }}
           >
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <h3 className="text-xl font-bold text-white">
+            <img
+              src="/farm2.jpg"
+              alt="Farm monitoring"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: "28px",
+              }}
+            >
+              <h3
+                style={{
+                  color: "white",
+                  fontWeight: 700,
+                  fontSize: "22px",
+                  marginBottom: "8px",
+                }}
+              >
                 Real-time Asset Monitoring
               </h3>
-              <p className="mt-2 text-sm text-white/70">
+              <p
+                style={{
+                  color: "rgba(255,255,255,0.7)",
+                  fontSize: "13px",
+                  lineHeight: 1.6,
+                }}
+              >
                 Track the physical collateral through satellite imagery and
                 regular digital geo-tagged farm visits.
               </p>

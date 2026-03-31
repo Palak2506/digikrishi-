@@ -24,11 +24,27 @@ const cardVariants = {
 export default function HowItWorksPage() {
   return (
     <>
-      <section
-        className="relative w-full py-20 text-center"
-        style={{ background: heroBg }}
-      >
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="relative w-full overflow-hidden py-20 text-center">
+        <img
+          src="/farm1.jpg"
+          alt=""
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            opacity: 0.12,
+            zIndex: 0,
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: heroBg, zIndex: 1 }}
+          aria-hidden
+        />
+        <div className="relative z-[2] mx-auto max-w-4xl px-6">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -179,6 +195,7 @@ export default function HowItWorksPage() {
                 title: "SHG Formation",
                 desc: "Farmers join Self Help Groups. Governance records, meeting minutes, and savings data are digitally maintained.",
                 tags: ["Group Savings", "Governance Records", "Local Network"],
+                thumbSrc: "/millet%20(1).jpeg",
               },
               {
                 step: "04",
@@ -187,6 +204,7 @@ export default function HowItWorksPage() {
                 title: "Crop Planning",
                 desc: "Seasonal crop plans are created with variety selection, acreage mapping, input requirements, and projected harvest timelines.",
                 tags: ["Variety Selection", "Acreage", "Input Planning"],
+                thumbSrc: "/millet%20(2).jpeg",
               },
               {
                 step: "05",
@@ -195,6 +213,7 @@ export default function HowItWorksPage() {
                 title: "Field Monitoring",
                 desc: "Field agents document crop conditions, update growth stages, and provide stage-wise cultivation guidance.",
                 tags: ["Growth Stages", "Field Logs", "Advisory"],
+                thumbSrc: "/millet%20(3).jpeg",
               },
             ].map((card) => {
               const Icon = card.icon;
@@ -240,6 +259,21 @@ export default function HowItWorksPage() {
                         {tag}
                       </span>
                     ))}
+                  </div>
+                  <div
+                    className="mt-6 overflow-hidden"
+                    style={{ height: "100px", borderRadius: "8px" }}
+                  >
+                    <img
+                      src={card.thumbSrc}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100px",
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                      }}
+                    />
                   </div>
                 </motion.div>
               );

@@ -47,11 +47,6 @@ export function Navbar() {
                 height: "38px",
                 borderRadius: "50%",
                 objectFit: "cover",
-                display: "block",
-              }}
-              onError={(e) => {
-                console.error("Logo failed to load");
-                (e.target as HTMLImageElement).style.display = "none";
               }}
             />
             <span

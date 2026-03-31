@@ -20,7 +20,6 @@ import {
   UserPlus,
   Wind,
 } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 
 const tabs = ["Farmer App", "Agent App", "Admin Portal"] as const;
@@ -113,12 +112,13 @@ function PhoneTopBar() {
   return (
     <div className="sticky top-0 z-10 flex shrink-0 justify-between bg-[#111] px-4 py-3">
       <div className="flex items-center">
-        <Image
+        <img
           src="/logo.png"
+          alt=""
           width={24}
           height={24}
-          alt=""
           className="rounded-full"
+          style={{ objectFit: "cover" }}
         />
         <span className="ml-2 text-sm font-semibold text-white">
           Digi Krishi
@@ -386,43 +386,22 @@ function AdminLaptopMockup() {
       >
         <div
           style={{
-            background: "#1a1a1a",
-            borderRadius: "14px 14px 0 0",
-            padding: "14px 14px 0 14px",
-            position: "relative",
+            width: "100%",
+            height: "280px",
+            overflow: "hidden",
+            borderRadius: "4px 4px 0 0",
           }}
         >
-          <div
+          <img
+            src="/admin-dashboard.png"
+            alt="Admin Dashboard"
             style={{
-              width: "5px",
-              height: "5px",
-              background: "#333",
-              borderRadius: "50%",
-              margin: "0 auto 8px auto",
-              boxShadow: "inset 0 0 0 1px #444",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top left",
             }}
           />
-
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "280px",
-              overflow: "hidden",
-              borderRadius: "4px 4px 0 0",
-            }}
-          >
-            <Image
-              src="/admin-dashboard.png"
-              alt="Digi Krishi Admin Dashboard"
-              fill
-              style={{
-                objectFit: "cover",
-                objectPosition: "top left",
-              }}
-              priority
-            />
-          </div>
         </div>
       </div>
 
